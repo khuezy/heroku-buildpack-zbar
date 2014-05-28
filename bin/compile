@@ -33,6 +33,8 @@ install () {
 	fi
 }
 
-export LD_LIBRARY_PATH=$build_dir/vendor/lib
+
+export LD_LIBRARY_PATH=$build_dir/vendor/lib:$LIBRARY_PATH
+set-default-env LD_LIBRARY_PATH /app/vendor/lib:/usr/lib
 
 install
